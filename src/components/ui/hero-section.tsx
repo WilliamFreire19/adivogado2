@@ -1,5 +1,4 @@
 import { Button } from "./button";
-
 const scrollToContact = () => {
   const contactSection = document.getElementById("contact-form");
   if (contactSection) {
@@ -14,8 +13,7 @@ export const HeroSection = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage:
-            "url(/lovable-uploads/ed86352f-aa0b-48ff-acc4-9fc8fbea1f03.png)",
+          backgroundImage: "url(/src/assets/hero-lawyer.jpg)",
           backgroundPosition: "center center",
         }}
       >
