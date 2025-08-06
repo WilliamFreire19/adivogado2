@@ -14,7 +14,7 @@ export const HeroSection = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/src/assets/hero-lawyer.jpg')",
+          backgroundImage: "url('/images/hero.jpg')",
           backgroundPosition: "center center",
         }}
       >
