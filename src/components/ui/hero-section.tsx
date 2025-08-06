@@ -1,4 +1,5 @@
 import { Button } from "./button";
+
 const scrollToContact = () => {
   const contactSection = document.getElementById("contact-form");
   if (contactSection) {
@@ -13,13 +14,14 @@ export const HeroSection = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url(/src/assets/hero-lawyer.jpg)",
+          backgroundImage: "url('/src/assets/hero-lawyer.jpg')",
           backgroundPosition: "center center",
         }}
       >
-        <div className="absolute inset-0 overlay-gradient"></div>
       </div>
 
+      {/* Fallback caso a imagem não carregue */}
+<div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 opacity-30"></div>
       {/* Content */}
       <div className="relative z-10 legal-container">
         <div className="max-w-3xl lg:max-w-4xl ml-0 lg:ml-16 xl:ml-24">
@@ -36,11 +38,7 @@ export const HeroSection = () => {
           <Button
             size="lg"
             className="legal-button-primary text-xl px-10 py-6"
-            onClick={() =>
-              document
-                .getElementById("contact-form")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
+            onClick={scrollToContact}
           >
             Consulta Gratuita
           </Button>
